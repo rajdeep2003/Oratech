@@ -1,0 +1,14 @@
+{
+  "name": "@ora/shared",
+  "version": "1.0.0",
+  "description": "Shared types, utils, and constants",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "type-check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}

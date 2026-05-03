@@ -1,0 +1,38 @@
+@import '../../styles/variables/variables.less';
+@import '../../styles/mixins/mixins.less';
+
+/**
+ * Card Component Styles
+ */
+
+.card {
+  background-color: @white;
+  border-radius: @radius-lg;
+  border: 1px solid @gray-200;
+  overflow: hidden;
+  .shadow(base);
+  .transition(box-shadow);
+  
+  .card-title {
+    font-size: @font-size-lg;
+    font-weight: @font-weight-semibold;
+    color: @gray-900;
+    padding: @space-lg;
+    border-bottom: 1px solid @gray-200;
+    background-color: @light-bg;
+  }
+  
+  .card-content {
+    padding: @space-lg;
+  }
+  
+  &.card-elevated {
+    .shadow(lg);
+    border: none;
+  }
+  
+  &.card-outlined {
+    border: 2px solid @primary-color;
+    box-shadow: none;
+  }
+}

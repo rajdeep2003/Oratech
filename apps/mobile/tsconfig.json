@@ -1,0 +1,37 @@
+{
+  "extends": "../../tsconfig.json",
+  "compilerOptions": {
+    "composite": true,
+    "noEmit": false,
+    "outDir": "./dist",
+    "declarationDir": "./dist/types",
+    "jsx": "react-jsx",
+    "jsxImportSource": "react",
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "allowJs": true,
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "paths": {
+      "@store": ["src/store/index"],
+      "@store/*": ["src/store/*"],
+
+      "@navigation": ["src/navigation/index"],
+      "@navigation/*": ["src/navigation/*"],
+
+      "@components/*": ["src/components/*"],
+      "@screens/*": ["src/components/screens/*"],
+      "@services/*": ["src/services/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@styles/*": ["src/styles/*"],
+      "@assets/*": ["src/assets/*"],
+      "@config/*": ["src/config/*"],
+      "@context/*": ["src/context/*"],
+      "@types/*": ["src/types/*"],
+      "@shared/*": ["../../packages/shared/*"]
+    }
+  },
+  "include": ["App.tsx", "src", "index.js"],
+  "exclude": ["node_modules", "dist"]
+}

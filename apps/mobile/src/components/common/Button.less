@@ -1,0 +1,67 @@
+@import '../../styles/variables/variables.less';
+@import '../../styles/mixins/mixins.less';
+
+/**
+ * Button Component Styles
+ */
+
+.btn {
+  .button-base();
+  padding: @space-sm @space-lg;
+  font-size: @font-size-base;
+  font-weight: @font-weight-semibold;
+  border-radius: @radius-md;
+  justify-content: center;
+  align-items: center;
+  
+  .text {
+    color: @white;
+    font-weight: @font-weight-semibold;
+  }
+  
+  &.btn-primary {
+    background-color: @primary-color;
+    
+    &:active {
+      opacity: 0.8;
+    }
+  }
+  
+  &.btn-secondary {
+    background-color: @gray-200;
+    
+    .text {
+      color: @gray-900;
+    }
+  }
+  
+  &.btn-danger {
+    background-color: @danger-color;
+  }
+  
+  &.btn-success {
+    background-color: @success-color;
+  }
+  
+  &.btn-sm {
+    padding: @space-xs @space-sm;
+    font-size: @font-size-sm;
+  }
+  
+  &.btn-md {
+    padding: @space-sm @space-lg;
+  }
+  
+  &.btn-lg {
+    padding: @space-md @space-xl;
+    font-size: @font-size-lg;
+  }
+  
+  &.btn-full {
+    width: 100%;
+  }
+  
+  &.disabled {
+    opacity: 0.5;
+  }
+}

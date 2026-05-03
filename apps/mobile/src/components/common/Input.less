@@ -1,0 +1,43 @@
+@import '../../styles/variables/variables.less';
+@import '../../styles/mixins/mixins.less';
+
+/**
+ * Input Component Styles
+ */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: @space-xs;
+  margin-bottom: @space-md;
+  
+  .label {
+    font-weight: @font-weight-semibold;
+    font-size: @font-size-sm;
+    color: @gray-700;
+  }
+  
+  .input {
+    padding: @space-sm @space-md;
+    border: 1px solid @gray-300;
+    border-radius: @radius-base;
+    font-size: @font-size-base;
+    color: @gray-900;
+    .transition(border-color);
+    
+    &:focus {
+      border-color: @primary-color;
+    }
+    
+    &.error {
+      border-color: @danger-color;
+      background-color: lighten(@danger-color, 45%);
+    }
+  }
+  
+  .error-text {
+    font-size: @font-size-sm;
+    color: @danger-color;
+    font-weight: @font-weight-medium;
+  }
+}

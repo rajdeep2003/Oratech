@@ -1,0 +1,22 @@
+{
+  "name": "ora-app",
+  "version": "1.0.0",
+  "description": "Full-stack application with React Native/Expo mobile app and Express backend",
+  "private": true,
+  "workspaces": [
+    "apps/mobile",
+    "apps/backend",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces",
+    "build": "npm run build --workspaces",
+    "test": "npm run test --workspaces",
+    "lint": "npm run lint --workspaces",
+    "format": "prettier --write \"**/*.{ts,tsx,js,jsx,json,css}\"",
+    "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css}\""
+  },
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
